@@ -43,34 +43,37 @@ An AI agent (Claude, Copilot, Codex, etc.) reads the relevant SKILL.md before re
 
 ## Installation
 
-### Option 1: Copy to your Claude/AI agent skills directory
+### Option 1 — npx (recommended)
 
 ```bash
-# Clone the repo
+# Install to current project (.claude/skills/)
+npx kmp-quality-skills
+
+# Install globally (~/.claude/skills/)
+npx kmp-quality-skills --global
+
+# List available skills with descriptions
+npx kmp-quality-skills list
+```
+
+### Option 2 — From GitHub (no npm publish needed)
+
+```bash
+npx github:mikel063093/kmp-quality-skills
+```
+
+### Option 3 — add-skill CLI
+
+```bash
+npx add-skill mikel063093/kmp-quality-skills
+```
+
+### Option 4 — Manual
+
+```bash
+# Clone and copy all skills
 git clone https://github.com/mikel063093/kmp-quality-skills.git
-
-# Copy all skills to your Claude skills directory
 cp -r kmp-quality-skills/skills/* ~/.claude/skills/
-
-# Or copy a single skill
-cp -r kmp-quality-skills/skills/compose-performance ~/.claude/skills/
-```
-
-### Option 2: Reference directly in your agent's context
-
-Add to your `AGENTS.md` or agent configuration:
-
-```markdown
-## KMP Quality Skills
-When reviewing Kotlin/KMP code, load the relevant skill from:
-https://raw.githubusercontent.com/mikel063093/kmp-quality-skills/main/skills/[skill-name]/SKILL.md
-```
-
-### Option 3: Use with OpenClaw
-
-```bash
-# Copy skills to OpenClaw workspace
-cp -r kmp-quality-skills/skills/* /root/.openclaw/workspace/skills/
 ```
 
 ---

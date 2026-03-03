@@ -1,0 +1,17 @@
+{
+  "name": "kmp-quality-skills",
+  "version": "1.0.0",
+  "description": "Agent Skills for Kotlin Multiplatform — SOLID, Clean Architecture, Compose performance, Flow/Coroutines, local AI, testing and more",
+  "keywords": ["kotlin", "kotlin-multiplatform", "kmp", "android", "ios", "compose", "agent-skills", "claude", "ai-coding"],
+  "author": "mikel063093",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikel063093/kmp-quality-skills.git"
+  },
+  "bin": {
+    "kmp-quality-skills": "./bin/install.js"
+  },
+  "files": ["skills", "bin"],
+  "engines": {"node": ">=16"}
+}
